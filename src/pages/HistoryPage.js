@@ -49,14 +49,14 @@ class HistoryPage extends React.Component {
                     <Col lg="6" md="6" sm="6" xs="6" style={{margin:0}}>
                       <img
                         alt="person"
-                        src={require('../assets/media/' + couple.person_1.profile_picture)}
+                        src={process.env.REACT_APP_SOURCE_URL + couple.person_1.profile_picture}
                         style={{ width: "auto", height: 100 }}
                       />
                     </Col>
                     <Col lg="6" md="6" sm="6" xs="6" style={{margin:0}}>
                       <img
                         alt="person"
-                        src={require('../assets/media/' + couple.person_2.profile_picture)}
+                        src={process.env.REACT_APP_SOURCE_URL + couple.person_2.profile_picture}
                         style={{ width: "auto", height: 100 }}
                       />
                     </Col></Row>
