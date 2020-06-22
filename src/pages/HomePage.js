@@ -75,6 +75,7 @@ class HomePage extends React.Component {
               backdrop>
               <ModalBody style={{padding: this.state.sessionLoaded ? 15: 0}}>
                 {!this.state.sessionLoaded &&
+
                 <img
                   alt="gif roulette"
                   style={{ width: '100%', height: '100%' }}
