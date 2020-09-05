@@ -32,12 +32,8 @@ class HomePage extends React.Component {
     this.toggle();
     let component = this;
     fetch(process.env.REACT_APP_API_URL + 'sessions/random', {
-      method: 'POST'}).then(response => {
-      let i;
-      return response.json()
-    }).then(
+      method: 'POST'}).then(response => response.json()).then(
       (responseJson) => {
-        console.log(responseJson)
         component.setState({session: responseJson, sessionLoaded: true});
       }
     ).catch(
@@ -52,6 +48,8 @@ class HomePage extends React.Component {
   validateSession = () => {
     this.toggle();
     fetch(process.env.REACT_APP_API_URL + 'sessions/' + this.state.session.id.toString() + '/validate', {method: 'PUT'})
+      .then(response => response.json())
+      .then(responseJson => console.log(responseJson))
   };
 
   render() {
